@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>換算結果</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* 背景色 */
+            font-family: sans-serif;
+             margin: 0;             /* ページの余白をなくす */
+            height: 100vh;         /* ビューポートの高さに合わせる */
+            display: flex;         /* Flexbox */
+            justify-content: center; /* 横方向中央 */
+            align-items: center;     /* 縦方向中央 */
+            flex-direction: column;  /* 子要素を縦に並べる */
+            text-align: center;      /* テキスト中央揃え */
+            color: #333;
+            padding: 20px;           /* 必要なら余白 */
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>換算結果</h2>
+    <p>{{ session['direction_str'] }}</p>
+    <a href="{{ url_for('index') }}">もう一度換算する</a>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>通貨換算アプリ</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* ← ここで背景色を指定 */
+            font-family: sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+         label {
+            font-weight: bold;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>通貨換算アプリ</h2>
+    <form method="post">
+        <label>換算方法:</label><br>
+        <input type="radio" name="direction" value="to_foreign" checked> 円 → 外貨<br>
+        <input type="radio" name="direction" value="to_yen"> 外貨 → 円<br><br>
+
+        <label>金額:</label>
+        <input type="number" name="amount" step="0.01" required><br><br>
+
+        <label>通貨を選んでください:</label>
+        <select name="currency">
+            <option value="USD">米ドル (USD)</option>
+            <option value="EUR">ユーロ (EUR)</option>
+            <option value="KRW">韓国ウォン (KRW)</option>
+        </select><br><br>
+        
+        <input type="submit" value="換算する">
+    </form>
+</body>
+</html>
+    
